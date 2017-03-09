@@ -1,0 +1,26 @@
+# Default inbox.
+set spoolfile = "+ivan-uff.com/INBOX"
+
+# Alternate email addresses.
+#alternates sjl@pculture.org still\.?life@gmail.com ivan@ladyluckblues.com ivan@pculture.org
+
+# Mailboxes to show in the sidebar.
+mailboxes +ivan-uff.com/INBOX \
+          +ivan-uff.com/UFF \
+          +ivan-uff.com/Adriana \
+          +ivan-uff.com/archive \
+          +ivan-uff.com/sent \
+          +ivan-uff.com/drafts \
+
+# Other special folders.
+set mbox      = "+ivan-uff.com/archive"
+set postponed = "+ivan-uff.com/drafts"
+
+set from     = "ivanlopes@id.uff.br"
+set sendmail = "/usr/bin/msmtp -a uff"
+set sendmail_wait = 0
+unset record
+
+
+macro index o "<shell-escape>offlineimap -a UFF<enter>" "run offlineimap to sync inbox"
+# vim: ft=muttrc

@@ -1,0 +1,11 @@
+# Paths ----------------------------------------------
+set folder           = "$my_dir/mail"               # mailbox location
+set alias_file       = "$my_dir/alias"         # where to store aliases
+set header_cache     = "$my_dir/cache/headers" # where to store headers
+set message_cachedir = "$my_dir/cache/bodies"  # where to store bodies
+set certificate_file = "$my_dir/certificates"  # where to store certs
+set mailcap_path     = "$my_dir/mailcap"       # entries for filetypes
+set tmpdir           = "$my_dir/temp"          # where to keep temp files
+set signature        = "$my_dir/sig"           # my signature file
+
+# vim: ft=muttrc

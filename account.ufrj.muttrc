@@ -1,0 +1,22 @@
+# Default inbox.
+set spoolfile = "+ivan-ufrj.com/INBOX"
+
+# Mailboxes to show in the sidebar.
+mailboxes +ivan-ufrj.com/INBOX \
+          +ivan-ufrj.com/ufrj \
+          +ivan-ufrj.com/Adriana \
+          +ivan-ufrj.com/archive \
+          +ivan-ufrj.com/sent \
+          +ivan-ufrj.com/drafts \
+
+# Other special folders.
+set mbox      = "+ivan-ufrj.com/archive"
+set postponed = "+ivan-ufrj.com/drafts"
+
+set from     = "lopesivan@poli.ufrj.br"
+set sendmail = "/usr/bin/msmtp -a ufrj"
+set sendmail_wait = 0
+unset record
+
+
+macro index o "<shell-escape>offlineimap -a UFRJ<enter>" "run offlineimap to sync inbox"

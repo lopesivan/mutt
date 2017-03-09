@@ -1,0 +1,20 @@
+# subscribed mailing lists
+#subscribe shell-script@yahoogrupos.com.br
+#subscribe pyside@qt-project.org
+#subscribe yocto@yoctoproject.org
+#subscribe users@lists.opennebula.org
+
+# mailinglists i'm not subscribed
+#lists twisted-python@twistedmatrix.com
+#lists gluster-devel@nongnu.org
+#lists python-win32@python.org
+#lists sensorml@lists.opengeospatial.org
+#lists yaml-core@lists.sourceforge.net
+
+subscribe shell-script@yahoogrupos.com.br
+#lists shell-script@yahoogrupos.com.br
+
+#macro index U "c=shell-script\n"
+#macro pager U "c=shell-script\n"
+
+# vim: ft=muttrc

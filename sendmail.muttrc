@@ -1,0 +1,8 @@
+set from     = "ivanlopes@id.uff.br"
+set sendmail = "/usr/bin/msmtp -a uff"
+set sendmail_wait = 0
+unset record
+# postfix
+#set sendmail="/usr/sbin/sendmail -oem -oi -C /etc/other/sendmail-config"
+#
+# vim: ft=muttrc

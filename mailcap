@@ -1,0 +1,89 @@
+
+
+# ~/.mutt/mailcap
+#
+# this uses the /home/ivan/developer/mutt/view_attachment.sh script found in ~/.mutt/view-attachment.sh
+#
+# this is meant for an OS X system
+
+# MS Excel
+# this will use the default xls spreadsheet handler from open
+application/x-msexcel; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/ms-exc; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/excel; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/msexcel; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.ms-exc; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.ms-excel; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+# MS Word
+# use textedit to open .doc files as it's more light-weight
+application/msword; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+#
+# for Star/OpenOffice stuff, use NeoOffice/J
+#
+# Star/Open Office Writer
+application/vnd.sun.xml.writer; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.sun.xml.writer.global; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.stardivision.writer; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.stardivision.writer-global; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/x-starwriter; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.sun.xml.writer.template; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+# Star/Open Office Calc
+application/vnd.sun.xml.calc; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.stardivision.calc; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/x-starcalc; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.sun.xml.calc.template; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+# Star/Open Office Draw
+application/vnd.sun.xml.draw; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.stardivision.draw; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/x-stardraw; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.sun.xml.draw.template; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+# Star/Open Office Math
+application/vnd.sun.xml.math; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.stardivision.math; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/x-starmath; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+application/vnd.sun.xml.writer; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+# Star/Open Office Impress
+application/x-starimpress; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.sun.xml.impress.template; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.sun.xml.impress; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.stardivision.impress; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.stardivision.impress-packed; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+# DOCX and things
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.openxmlformats-officedocument.spreadsheetml.template; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.openxmlformats-officedocument.presentationml.template; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.openxmlformats-officedocument.presentationml.slideshow; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.openxmlformats-officedocument.presentationml.presentation; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.openxmlformats-officedocument.presentationml.slide; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.openxmlformats-officedocument.wordprocessingml.template; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.ms-excel.addin.macroEnabled.12; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+application/vnd.ms-excel.sheet.binary.macroEnabled.12; /home/ivan/developer/mutt/view_attachment.sh %s "-" pdf
+
+# Images
+image/jpeg; /home/ivan/developer/mutt/view_attachment.sh %s "-" "feh"
+image/pjpeg; /home/ivan/developer/mutt/view_attachment.sh %s "-" "feh"
+image/png; /home/ivan/developer/mutt/view_attachment.sh %s "-" "feh"
+image/gif; /home/ivan/developer/mutt/view_attachment.sh %s "-" "feh"
+image/tiff; /home/ivan/developer/mutt/view_attachment.sh %s "-" "feh"
+#image/*; /usr/bin/gthumb '%s'; test=test -n "$DISPLAY"
+
+# PDF
+application/pdf; /home/ivan/developer/mutt/view_attachment.sh %s "-"
+
+# HTML
+# text/html; lynx -stdin -dump -force_html ; copiousoutput
+#text/html; pandoc -f html -t markdown; copiousoutput
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+
+# Unidentified.
+application/octet-stream; /home/ivan/developer/mutt/view_attachment.sh %s "-"
+video/*; /home/ivan/developer/mutt/view_attachment.sh %s "-"

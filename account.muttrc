@@ -1,0 +1,17 @@
+# Default inbox.
+set spoolfile = "+ivan-uff.com/INBOX"
+
+# Alternate email addresses.
+#alternates sjl@pculture.org still\.?life@gmail.com ivan@ladyluckblues.com ivan@pculture.org
+
+# Mailboxes to show in the sidebar.
+mailboxes +ivan-uff.com/INBOX \
+          +ivan-uff.com/UFF \
+          +ivan-uff.com/Adriana \
+          +ivan-uff.com/archive \
+          +ivan-uff.com/sent \
+          +ivan-uff.com/drafts \
+
+# Other special folders.
+set mbox      = "+ivan-uff.com/archive"
+set postponed = "+ivan-uff.com/drafts"

@@ -1,0 +1,55 @@
+# Generic key bindings.
+bind generic <home>  first-entry
+bind generic <end>   last-entry
+bind generic <left>  previous-entry
+bind generic <right> next-entry
+
+bind index gg       first-entry
+
+bind index G        last-entry
+
+bind index R        group-reply
+bind index <tab>    sync-mailbox
+bind index <space>  collapse-thread
+
+# Ctrl-R to mark all as read
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+
+# Sync email
+macro index O "<shell-escape>offlineimap<enter>"        "run offlineimap to sync all mail"
+
+# Saner copy/move dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+bind    index   <up>    previous-entry
+bind    index   <down>  next-entry
+bind    index   <right> display-message
+macro   index   <left>  "c?"
+bind    index   <delete> delete-message
+
+bind    pager   <up>    previous-line
+bind    pager   <down>  next-line
+bind    pager   <left>  previous-entry
+bind    pager   <right> next-entry
+bind    pager   <delete> delete-message
+
+bind index,pager  <F3> sidebar-prev
+bind index,pager  <F2> sidebar-next
+bind index,pager  <F4> sidebar-open
+macro index,pager <F5> '<enter-command>toggle sidebar_visible<enter>'
+
+bind compose p postpone-message
+bind compose P pgp-menu
+
+# Attachment
+
+# View, god dammit!
+bind attach <return> view-mailcap
+
+#
+# "Open in Vim"
+
+macro index,pager V "|vim -c 'setlocal ft=mail' -c 'setlocal buftype=nofile' -<enter>"              "open in vim"
+
+# vim: ft=muttrc
